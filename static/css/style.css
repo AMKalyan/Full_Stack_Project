@@ -1,0 +1,115 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    flex: 1;
+}
+
+/* Light theme (default) */
+body.light-theme {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.light-theme .navbar.navbar-light {
+    background-color: #e9ecef !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme footer {
+    background-color: #e9ecef !important;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #dee2e6;
+}
+
+body.light-theme .navbar.navbar-light {
+    background-color: #e9ecef !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+body.dark-theme {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-theme .navbar.navbar-dark {
+    background-color: #343a40 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .card {
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+body.dark-theme .card-body {
+    color: #e9ecef;
+}
+
+body.dark-theme .card-header:not(.bg-danger):not(.bg-warning):not(.bg-info) {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+body.dark-theme .card-header.bg-light,
+body.dark-theme .badge.bg-light {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+}
+
+body.dark-theme .card-footer {
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+body.dark-theme .alert-info {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0a58ca;
+}
+
+body.dark-theme .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark-theme footer {
+    background-color: #343a40 !important;
+    color: #f8f9fa;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #495057;
+}
+
+/* Footer highlight */
+.footer-highlight {
+    background-color: #e9ecef;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #dee2e6;
+    font-weight: 500;
+}
+
+body.dark-theme .footer-highlight {
+    background-color: #343a40;
+    color: #f8f9fa;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #495057;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s;
+}
+
+.theme-icon {
+    font-size: 1.2rem;
+}
