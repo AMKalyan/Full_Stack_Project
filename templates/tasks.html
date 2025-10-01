@@ -25,7 +25,36 @@
                         <p class="card-text"><small class="text-muted">Due: {{ task.due_date }}</small></p>
                         {% endif %}
                     </div>
-                    <!---->
+                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                        <form action="{{ url_for('complete_task', id=task.id) }}" method="post" class="complete-form">
+                            <button type="submit" class="btn btn-sm {% if task.completed %}btn-outline-secondary{% else %}btn-outline-success{% endif %} complete-btn">
+                                {% if task.completed %}Mark Incomplete{% else %}Mark Complete{% endif %}
+                            </button>
+                        </form>
+                        <form action="{{ url_for('delete', id=task.id) }}" method="post" class="delete-form">
+                            <button type="submit" class="btn btn-sm btn-outline-danger delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="col-12">
+            <div class="alert alert-info" role="alert">
+                No {{ active_page }} tasks found.
+                {% if active_page == 'completed' %}
+                    Complete some tasks to see them here!
+                {% elif active_page == 'active' %}
+                    Add new tasks to get started!
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
 <script>
     $(document).ready(function() {
         // Confirmation before delete
