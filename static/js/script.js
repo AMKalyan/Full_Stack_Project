@@ -8,7 +8,6 @@ $(document).ready(function() {
     });
 
     // Form validation demo for email/password fields
-    // This is just a demo as per requirements, not actually used in the app
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
@@ -78,7 +77,7 @@ $(document).ready(function() {
         return date instanceof Date && !isNaN(date);
     }
     
-    // Confirmation before delete
+    // Confirmation alert before delete
     $('.delete-btn').on('click', function(e) {
         if (!confirm('Are you sure you want to delete this task?')) {
             e.preventDefault();
