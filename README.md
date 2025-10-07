@@ -51,3 +51,40 @@ This application allows users to create, view, and delete tasks with different p
 *User login interface*
 
 
+## Project Structure
+
+```
+Full Stack Project/
+├── project/
+├── app.py                  # Main Flask application
+├── requirements.txt        # Python dependencies
+├── instance/              
+│   └── tasks.db            # SQLite database (created on first run)
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css   # Custom CSS styles
+│   │   └── js/
+│   │       └── script.js   # Custom JavaScript
+│   └── templates/
+│       ├── base.html       # Base template with layout
+│       ├── index.html      # Home page with task form and list
+│       └── success.html    # Success page after task creation
+└── README.md              # This file
+```
+
+## Setup Instructions
+
+1. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Run the application:
+   ```
+   python app.py
+   ```
+
+3. Open your browser and navigate to:
+   ```
+   http://127.0.0.1:5000/
+   ```
