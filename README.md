@@ -1,6 +1,7 @@
 # To-Do List Web Application
 
-A responsive web application for managing your tasks, built with Flask, Bootstrap 5, and jQuery.
+A responsive web application for managing your tasks, built with HTML, CSS, Bootstrap 5, JavaScript, and Flask.
+
 
 ## Purpose
 
@@ -74,17 +75,19 @@ Full Stack Project/
 
 ## Setup Instructions
 
-1. Install dependencies:
+1. Clone the repository using the git clone command
+
+2. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-2. Run the application:
+3. Run the application:
    ```
    python app.py
    ```
 
-3. Open your browser and navigate to:
+4. Open your browser and navigate to:
    ```
    http://127.0.0.1:5000/
    ```
