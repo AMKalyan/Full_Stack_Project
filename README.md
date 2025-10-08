@@ -56,11 +56,11 @@ This application allows users to create, view, and delete tasks with different p
 
 ```
 Full Stack Project/
-├── project/
 ├── app.py                  # Main Flask application
 ├── requirements.txt        # Python dependencies
 ├── instance/              
 │   └── tasks.db            # SQLite database (created on first run)
+├── project/
 │   ├── static/
 │   │   ├── css/
 │   │   │   └── style.css   # Custom CSS styles
